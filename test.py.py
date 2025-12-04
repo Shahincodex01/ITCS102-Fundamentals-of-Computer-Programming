@@ -3,7 +3,6 @@ import time
 #time.sleep()
 #print("\033[4mUnderlined\33[0m]")
 
-
 wel_come = input("HI, CAN YOU TELL ME YOUR \033[4mNAME\33[0m: ").upper()
 gen_der = input("WHAT'S YOUR \033[4mGENDER\33[0m? 'M or F': ").upper()
 
@@ -28,14 +27,11 @@ while True:
     print("A - PRINTING IN PYTHON")
     print("B - CONDITIONAL STATEMENT")
     print("C - LOOPING STATEMENTS")
-    print("D - FUNCTIONS")
-    print("E - ARRAYS")
-    print("F - DICTIONARY")
-    print("G - RUN YOUR OWN CODE")
-    print("H - EXIT THE PROGRAM")
+    print("D - ARRAYS")
+    print("E - DICTIONARY")
+    print("F - RUN YOUR OWN CODE")
+    print("G - EXIT THE PROGRAM")
   
-    
-
     choice = input("SELECT FOR THE OPTIONS ABOVE ---> ").upper()
 
     if choice == '0':
@@ -49,6 +45,7 @@ while True:
                 print("Good. let's move on.")
                 break
             elif what == 'N':
+                os.system('cls')
                 print("---------------------------------------------------------------------------------------------------")
                 print("\t\t\t        \033[4mGUIDO VAN ROSSUM\033[0m\n")
                 time.sleep(0.5)
@@ -71,16 +68,16 @@ while True:
                 time.sleep(0.5)
                 break
             else:
-                print("Invalid")
-                wala_lang = input("Type anything to retry: ")
+                print("INVALID")
                 continue
         continue
 
     
-    if choice == 'A':
+    elif choice == 'A':
         while True:
             os.system('cls')
             print("---------------------------------------------------------------------------------------------------")
+            print("\t\t\tWELCOME TO PRINT IN PYTHON")
             print("1 - Definition")
             print("2 - Data Types")
             print("3 - Example")
@@ -108,8 +105,6 @@ while True:
                 time.sleep(1.2)
                 continue
             
-            
-
             elif letter_A == '2':
                 print("---------------------------------------------------------------------------------------------------")
                 print("\t\t\tDATA TYPES\n")
@@ -118,45 +113,50 @@ while True:
                 print("* Float (float): A number with a decimal point.\nExample: 99.99, 36.6. Used for prices, measurements, or calculations.\n")
                 print("* String (str): Text or characters, always in quotes.\nExample: 'Shahin', 'Hello'. Used for names, messages, or any text.\n")
                 print("* Boolean (bool): A value that can only be True or False.\nUsed for conditions, decisions, and logic.\n")
-                input("Let's test if you really know it, type anything: ")
-                print("---------------------------------------------------------------------------------------------------\n")
-                print("\t\t\tQuestion Table\n")
-                print("I. Look for the underlined words to identify it. Identify if it's int, float, str, bool. Input your answers in the Answer Table\n")
-                print("1. A Bite of Python \033[4mExersice\033[0m.")
-                print("2. Layla has \033[4m1\033[0m extra notebook for keeping notes in the class of Sir Mesiera.")
-                print("3. Balmond got GPA of \033[4m4.0\033[0m overall.")
-                print("4. Miya thinks Python is fun and saber agrees: \033[4mTrue\033[0m or \033[4mfalse\033[0m?\n ")
-                print("\t\t\tAnswer Table\n")
-
-
-                input1 = input("1 = ").lower()
-                input2 = input("2 = ").lower()
-                input3 = input("3 = ").lower()
-                input4 = input("4 = ").lower()
-
-                print("-------------------------------")
-
-                if input1 == "str":
-                    print("1.", input1, "=", "Correct")
+                anona = input("Do you want an example? 'Y' or 'N': ").upper()
+                if anona == 'Y':
+                    print("---------------------------------------------------------------------------------------------------\n")
+                    print("\t\t\tQuestion Table\n")
+                    print("I. Look for the underlined words to identify it. Identify if it's int, float, str, bool. Input your answers in the Answer Table\n")
+                    print("1. A Bite of Python \033[4mExersice\033[0m.")
+                    print("2. Layla has \033[4m1\033[0m extra notebook for keeping notes in the class of Sir Mesiera.")
+                    print("3. Balmond got GPA of \033[4m4.0\033[0m overall.")
+                    print("4. Miya thinks Python is fun and saber agrees: \033[4mTrue\033[0m or \033[4mfalse\033[0m?\n ")
+                    print("\t\t\tAnswer Table\n")
+                    input1 = input("1 = ").lower()
+                    input2 = input("2 = ").lower()
+                    input3 = input("3 = ").lower()
+                    input4 = input("4 = ").lower()
+                    print("-------------------------------")
+                    if input1 == "str":
+                        print("1.", input1, "=", "Correct")
+                    else:
+                        print("1. Wrong")
+                    if input2 == "int":
+                        print("2.", input2, "=", "Correct")
+                    else:
+                        print("2. Wrong")
+                    if input3 == "float":
+                        print("3.", input3, "=", "Correct")
+                    else:
+                        print("3. Wrong")
+                    if input4 == 'bool':
+                        print("4.", input4, "=", "Correct")
+                    else:
+                        print("4. Wrong\n")
+                    
+                    input("Type anything to go back to Submenu: ")
+                    time.sleep(1.5)
+                    continue
+                elif anona == 'N':
+                    print("Going back to Submenu...")
+                    time.sleep(1)
+                    continue
                 else:
-                    print("1. Wrong")
-                if input2 == "int":
-                    print("2.", input2, "=", "Correct")
-                else:
-                    print("2. Wrong")
-                if input3 == "float":
-                    print("3.", input3, "=", "Correct")
-                else:
-                    print("3. Wrong")
-                if input4 == 'bool':
-                    print("4.", input4, "=", "Correct")
-                else:
-                    print("4. Wrong\n")
-                
-                input("Type anything to go back to Submenu:")
-                time.sleep(1.5)
-                continue
-
+                    print("Invalid")
+                    print("Going back to Submenu...")
+                    time.sleep(1)
+                    continue
 
             elif letter_A == '3':
                 print("---------------------------------------------------------------------------------------------------")
@@ -167,7 +167,7 @@ while True:
                 print("\nExpected Output:")
                 print("\tHello World!\n")
 
-                print("Now it's your turn!")
+                print("Now it's your turn!\n")
                 user_code = input("Type something to print (example: 'Hello Python'): ")
 
                 print("\nYour Output:")
@@ -192,39 +192,88 @@ while True:
                     print("Type anything to execute the code you put:  ")
                     varia = input("Input a variable: ")
                     outpuT = input("Input a output: ")
-                    print()
-
-                    print("In python: ")
+                    print("\nIn python:\n ")
                     print(varia, "=", outpuT,"\n")
                     print(f'print({varia})\n')
                     print("Output:\n")
                     print(outpuT,"\n")
                     pause = input("Type anything to go back: ")
-                    break
+                    continue
                 elif huy == 'N':
                     print("Going back..")
                     time.sleep(1)
                     print("Done.")
-                    break
+                    continue
                 else:
                     print("Invalid")
                     continue
-
-                    
-
             elif letter_A == '5':
                 print("You have selected 5 - back")
                 time.sleep(1)
                 print("Processing...")
-                
                 break
+            else:
+                print("INVALID")
+                time.sleep(1)
+                continue
 
     elif choice == '1':
         while True:
             os.system('cls')
             print("---------------------------------------------------------------------------------------------------")
-            print("FUNCTIONS")
-            break
+            print("\t\t\tWELCOME TO FUNCTIONS")
+            print("1 - Functions")
+            print("0 - Back")
+            bai = input("Select options above: ")
+            os.system('cls')
+            print("---------------------------------------------------------------------------------------------------")
+            if bai == '1':
+                print("A function in Python is a reusable block of code that performs a specific task.\n")
+                print("Instead of writing the same code many times, you can put it inside a function and reuse it whenever you need.\n")
+                print("Here are some of the functions: ")
+                print("print() → displays text")
+                print("input() → lets the user type something")
+                print("len() → counts characters")
+                print("type() → shows the data type\n")
+                haynako = input("Do you want an example?: 'Y' or 'N': ").upper()
+                print("---------------------------------------------------------------------------------------------------")
+                if haynako == 'Y':
+                    name = input("Enter your name: ")
+
+                    print("\nprint('Hello', name)")
+                    print("Hello,", name)
+
+                    print("\ninput('Enter your name: ')")
+                    print("You typed:", name)
+
+
+                    print("\nlen(name)")
+                    print("Length of your name:", len(name))
+
+                    print("\ntype(name)")
+                    print("Type of your input:", type(name))
+                    input("\nType anything to go back: ")
+                    continue
+                elif haynako == 'N':
+                    print("Going back..")
+                    time.sleep(1)
+                    print("DONE.")
+                    time.sleep(0.5)
+                    continue
+                else:
+                    print("INVALID")
+                    input("TYPE ANYTHING TO GO BACK: ")
+                    continue
+
+            elif bai == '0':
+                print("Going back..")
+                time.sleep(1)
+                print("DONE.")
+                time.sleep(0.5)
+                break
+            else:
+                print("INVALID")
+                continue
 
     elif choice == '2':
         while True:
@@ -275,11 +324,14 @@ while True:
                     print(f"{n1} // {n2} = {g}")
 
                     input("\nType anything to go back: ")
-                else:
+                elif hayst == 'N':
                     print("Going back..")
                     time.sleep(1)
                     print("DONE.")
                     time.sleep(0.5)
+                else:
+                    print("INVALID")
+                    time.sleep(1)
                 continue
 
             elif anlala == '2':
@@ -336,7 +388,7 @@ while True:
                     print("Going back to Submenu...")
                     time.sleep(1)
                     continue
-            
+
 
             elif anlala == '3':
                 os.system('cls')
@@ -364,9 +416,10 @@ while True:
                     print(f"{lala1} > {lala2}   ->  {lala1 > lala2}")
                     print(f"{lala1} < {lala2}   ->  {lala1 < lala2}")
                     print(f"{lala1} >= {lala2}  ->  {lala1 >= lala2}")
-                    print(f"{lala1} <= {lala2}  -> {lala1 <= lala2}\n")
+                    print(f"{lala1} <= {lala2}  ->  {lala1 <= lala2}\n")
                     input("Type anything if you're done: ")
                 else:
+                    print("INVALID")
                     print("Going back..")
                     time.sleep(1)
                     print("DONE.")
@@ -375,24 +428,59 @@ while True:
 
             elif anlala == '4':
                 os.system('cls')
-                print("---------------------------------------------------------------------------------------------------\n")
+                print("---------------------------------------------------------------------------------------------------")
                 print("\t\t\tWELCOME TO LOGICAL OPERATORS\n")
-                break
+                print("Logical operators check two or more conditions at the same time.")
+                print("They return True or False.")
+                print("\nOperators:")
+                print("and  = True only if BOTH conditions are true")
+                print("or   = True if AT LEAST one condition is true")
+                print("not  = Reverses True to Fals")
+                print("------------------------------------------------------------")
+
+                choose = input("Do you want to try a demo? 'Y' or 'N': ").upper()
+
+                if choose == "Y":
+                    gag = input("\nDid you eat today? (Y/N): ").upper()
+                    gog = input("Did you sleep well? (Y/N): ").upper()
+
+                    ate = gag == "Y"
+                    slept = gog == "Y"
+                    print("\nResults:")
+                    print("ate and slept  ->", ate and slept)
+                    print("ate or slept   ->", ate or slept)
+                    print("not ate        ->", not ate)
+
+                    input("\nType anything to go back: ")
+                    continue
+                elif choose == 'N':
+                    input("Ok, type anything to go back: ")
+                    continue
+                else:
+                    print("INVALID")
+                    time.sleep(0.7)
+                    print("Going back..")
+                    time.sleep(0.7)
+                    print("DONE")
+                    time.sleep(0.5)
+                    continue
 
             elif anlala == '5':
                 print("Going back...")
                 time.sleep(1)
                 print("DONE")
                 time.sleep(0.5)
+                break
+            else:
+                print("INVALID")
+                continue
             break
-
-            
 
     elif choice == 'B':
         while True:
             os.system('cls')
             print("---------------------------------------------------------------------------------------------------")
-            print("\t\t\tWELCOME TO THE WORLD OF DECISIONS")
+            print("\t\t\tWELCOME TO THE WORLD OF DECISIONS\n")
             print("Before we begin, i like to test you first 👾\n")
             do0r = input("Choose a door: '1' '2': ")
 
@@ -419,57 +507,145 @@ while True:
             time.sleep(0.5)
             print("It lets Python choose an action depending on your input.\n")
             time.sleep(0.5)
-            print("Now thta")
-
-
-            input("Type anything if you want to go back to the menu: ")
-            time.sleep(0.5)
-            break
-
+            print("---------------------------------------------------------------------------------------------------")
+            print("1 - Definition")
+            print("2 - Example")
+            print("3 - Back")
+            coke = input("Select options above: ")
+            if coke == '1':
+                print("---------------------------------------------------------------------------------------------------")
+                print("\t\t\tCONDITIONAL STATEMENTS\n")
+                print("Conditional Statements in Python are instructions that let the " \
+                "program make decisions based on certain conditions.")
+                print("They check whether a condition is True or False and then execute" \
+                " specific code depending on the result.\n")
+                print("Main Types are:\n")
+                print("* \033[1mif\033[0m -> Runs code only if the condition is true.\n* \033[1melif\033[0m -> (short for “else if”)" \
+                " Runs code if the previous if or elif conditions were false, but this one is true\n* \033[1melse\033[0m -> Runs code if all previous conditions are false.\n")
+                input("Type anything if you're done: ")
+                continue
+            elif coke == "2":
+                print("---------------------------------------------------------------------------------------------------")
+                print("\t\t\tEXAMPLES\n")
+                print("if weather == 'raining':")
+                print("    print('Take an umbrella.')") 
+                print("elif weather == 'cloudy':")
+                print("    print('Wear a jacket.')")
+                print("elif weather == 'sunny'")
+                print("    print('Wear sunglasses.')")
+                print("else:")
+                print("    print('Invalid.')\n")
+                weather = input("Whats the weather today? 'Raining', 'Cloudy', 'Sunny': ").upper()
+                if weather == 'RAINING':
+                    print("\nTake an umbrella.\n")
+                    time.sleep(1)
+                elif weather == 'CLOUDY':
+                    print("\nWear a jacket.\n")
+                    time.sleep(1)
+                elif weather =='SUNNY':
+                    print("\nWear sunglasses.\n")
+                    time.sleep(1)
+                else:
+                    print("\nInvalid.\n")
+                    time.sleep(1)
+                print("---------------------------------------------------------------------------------------------------")
+                print("2nd Example: \n")
+                print("if age < 13:")
+                print("    print('You are a child.')")
+                print("elif age >= 13 and age < 20:")
+                print("    print('You are a teenager.')")
+                print("else:")
+                print("    print('You are an adult.')\n")
+                age = int(input("Input your age: "))
+                if age < 13:
+                    print("You are a child.\n")
+                elif age >= 13 and age < 20:
+                    print("You are a teenager.\n")
+                else:
+                    print("You are an adult.\n")
+                    input("Type anything to go back: ")
+                    time.sleep(0.5)
+                break
+            elif coke == '3':
+                print("You've choosed 3 - Back")
+                print("Going back...")
+                time.sleep(1)
+                print("Done")
+                break
+            else:
+                print("INVALID")
+                continue
         continue                
     
     elif choice == 'C':
         while True:
             os.system('cls')
             print("---------------------------------------------------------------------------------------------------")
-            print("\t\tWELCOME TO THE WORLD OF REPEATING MAGIC!\n")
+            print("\t\t\tWELCOME TO THE WORLD OF REPEATING MAGIC!\n")
             time.sleep(1)
-            print("In this section, you'll discover how Python repeats actions without getting tired.")
-            time.sleep(1)
-            print("\nA for loop is used when you want to repeat something a specific number of times.")
-            time.sleep(1)
-            print("Example:")
-            print("for i in range(5):")
-            print("    print(\"Hello\")")
-            print("\nOutput:")
-            for i in range(5):
-                print("Hello")
-            print()
-            input("Type anything if you want to go back to the menu: ")
-            break
-    
-        continue
+            print("1 - Definitions")
+            print("2 - Examples")
+            print("3 - Back")
+            floryn = input("Select options above: ")
+
+            if floryn == '1':
+                print("\nDEFINITIONS\n")
+                time.sleep(1)
+                print("-> Loop: A way to repeat a block of code multiple times automatically.")
+                time.sleep(1)
+                print("\n-> For Loop: Used when you know exactly how many times you want to repeat something.")
+                print("   Example: repeat something 5 times.")
+                time.sleep(1)
+                print("\n-> While Loop: Used when you want something to repeat as long as a condition remains TRUE.")
+                print("   Example: keep looping while a number is less than 10.")
+                time.sleep(1)
+                print("\n-> range(): Generates a sequence of numbers, commonly used in for loops.")
+                print("   Example: range(5) -> 0 1 2 3 4")
+                time.sleep(1)
+                input("\nType anything to go back: ")
+
+            elif floryn == '2':
+                print("\nEXAMPLES\n")
+                print("Example 1: For loop printing 5 times")
+                print("for i in range(5):")
+                print("    print('Hello')")
+                print("\nOutput:")
+                for i in range(5):
+                    print("Hello")
+                print("\nExample 2: Printing numbers 1 to 5")
+                print("for i in range(1, 6):")
+                print("    print(i)")
+                print("\nOutput:")
+                for i in range(1, 6):
+                    print(i)
+                print("\nExample 3: While loop counting up")
+                print("count = 1")
+                print("while count <= 5:")
+                print("    print(count)")
+                print("    count += 1")
+                print("\nOutput:")
+                count = 1
+                while count <= 5:
+                    print(count)
+                    count += 1
+
+                input("\nType anything if you want to go back to the menu ")
+                break
 
     elif choice == 'D':
         os.system('cls')
         print("---------------------------------------------------------------------------------------------------")
-        print("Welcome")
 
 
     elif choice == 'E':
         os.system('cls')
         print("---------------------------------------------------------------------------------------------------")
 
-
     elif choice == 'F':
         os.system('cls')
         print("---------------------------------------------------------------------------------------------------")
 
+
     elif choice == 'G':
-        os.system('cls')
-        print("---------------------------------------------------------------------------------------------------")
-
-
-    elif choice == 'H':
         print("YOU HAVE EXITED THE PROGRAM THANK YOU")
         break
