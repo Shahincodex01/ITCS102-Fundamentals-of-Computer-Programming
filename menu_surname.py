@@ -1,8 +1,10 @@
 import os
 import time
+from defexp import colors
+#print(c["RED"] + "This is red text" + c["RESET"])
 #time.sleep()
 #print("\033[4mUnderlined\33[0m]")
-
+c = colors()
 wel_come = input("HI, CAN YOU TELL ME YOUR \033[4mNAME\33[0m: ").upper()
 gen_der = input("WHAT'S YOUR \033[4mGENDER\33[0m? 'M or F': ").upper()
 
@@ -12,7 +14,7 @@ if gen_der == 'M':
 elif gen_der == 'F':
     title = ("MS.")
 else:
-    title = ("THEY/THEM")
+    title = ("MX.")
 
 while True:
     print("---------------------------------------------------------------------------------------------------")
@@ -29,9 +31,8 @@ while True:
     print("C - LOOPING STATEMENTS")
     print("D - ARRAYS")
     print("E - DICTIONARY")
-    print("F - RUN YOUR OWN CODE")
-    print("G - EXIT THE PROGRAM")
-  
+    print("F - EXIT THE PROGRAM")
+
     choice = input("SELECT FOR THE OPTIONS ABOVE ---> ").upper()
 
     if choice == '0':
@@ -571,6 +572,7 @@ while True:
                 print("Going back...")
                 time.sleep(1)
                 print("Done")
+                time.sleep(1)
                 break
             else:
                 print("INVALID")
@@ -581,13 +583,16 @@ while True:
         while True:
             os.system('cls')
             print("---------------------------------------------------------------------------------------------------")
-            print("\t\t\tWELCOME TO THE WORLD OF REPEATING MAGIC!\n")
+            print("\t\t\tWELCOME TO THE WORLD OF REPEATING MAGIC!")
+            print("---------------------------------------------------------------------------------------------------\n")
             time.sleep(1)
             print("1 - Definitions")
             print("2 - Examples")
-            print("3 - Back")
+            print("3 - Mini Demo")
+            print("4 - Back")
             floryn = input("Select options above: ")
-
+            print()
+            os.system('cls')
             if floryn == '1':
                 print("\nDEFINITIONS\n")
                 time.sleep(1)
@@ -630,22 +635,125 @@ while True:
                     count += 1
 
                 input("\nType anything if you want to go back to the menu ")
+
+            elif floryn == '3':  
+                os.system('cls')
+                print("---------------------------------------------------------------------------------------------------")
+                print("\t\t\tMINI DEMOO")
+                print("---------------------------------------------------------------------------------------------------")
+                print("Type a loop like this example:")
+                print("for i in range(5): print(i)\n")
+
+                user_loop = input("Your loop: ")
+
+                print("\nOUTPUT:")
+                try:
+                    exec(user_loop)
+                except Exception as e:
+                    print("Error in your code:", e)
+
+                input("\nPress Enter to go back to the Loops Menu.")
+
+            elif floryn == '4':
+                print("You've choosed 4 - Back")
+                print("Going back...")
+                time.sleep(1)
+                print("Done")
+                time.sleep(1)
                 break
 
     elif choice == 'D':
-        os.system('cls')
-        print("---------------------------------------------------------------------------------------------------")
+        while True:
+            os.system('cls')
+            print("---------------------------------------------------------------------------------------------------")
+            print(f"\t\t\tWELCOOME TO ARRAYS", title , wel_come)
+            print("1 - Definitions")
+            print("2 - Examples")
+            print("3 - Back")
+            joy = input("Select options above: ")
+            os.system('cls')
+            if joy == '1':
+                print("\t\t\t\tDEFINITIONS\n")
+                print("An array is a data structure that stores multiple values in an ordered list,\n" \
+                "         where each value can be accessed by its position or index.\n")
+                input("Type anything to go back: ")
+                continue
+            elif joy == '2':
+                print("\t\t\tEXAMPLES\n")
+                numbers = []
+                while True:
+                    num = int(input("Enter a number (Type 0 to stop): "))
+                    
+                    if num == 0:
+                        print("\nEND")
+                        break
+                    
+                    numbers.append(num)
+
+                total = sum(numbers)
+
+                print("\nYour Numbers:")
+                for n in numbers:
+                    print(f"- {n}")
+
+                print(f"\nTotal Sum: {total}")
+                input("Type anything to go back: ")
+                continue
+
+            elif joy == '3':
+                print("You've choosed 3 - Back")
+                print("Going back...")
+                time.sleep(1)
+                print("Done")
+                time.sleep(1)
+                break
+            else:
+                print("INVALID")
 
 
     elif choice == 'E':
-        os.system('cls')
-        print("---------------------------------------------------------------------------------------------------")
+        while True:
+            os.system('cls')
+            print("---------------------------------------------------------------------------------------------------")
+            print("\t\t\tWELCOME TO DICTIONARY", title, wel_come)
+            print("1 - Definitions")
+            print("2 - Examples")
+            print("3 - Back")
+            papel = input("Select options above: ")
+            if papel == '1':
+                os.system('cls')
+                print("\t\t\t     WELCOME TO DICTIONARY", title, wel_come)
+                print("\t\n            A dictionary is a collection which is unordered, changeable and indexed.\n")
+                print("\tIn Python dictionaries are written with curly brackets, and they have keys and values.\n")
+                print("A dictionary is similar to a list but each element is being access by a unique key instead of an index number.\n")
+                input("\t\t\t    Type anything to go backk: ")
+                continue
+            elif papel == '2':
+                print("EXAMPLE:")
+                person = {}  
+    
+                person["name"] = input("Enter your name: ")
+                person["age"] = input("Enter your age: ")
+
+                print("\nYour Data:")
+                print(person)
+
+                print("\nExplanation:\n")
+                print("The dictionary stored your information using KEYS and VALUES.")
+                print("The key is like a label (ex: 'name', 'age'), and the value is your answer.")
+                print("This lets Python easily find specific information when needed.")
+                input("Type anything to go back: ")
+
+            elif papel == '3':
+                print("You've choosed 3 - Back")
+                print("Going back...")
+                time.sleep(1)
+                print("Done")
+                time.sleep(1)
+                break
+            else:
+                print("INVALID")
 
     elif choice == 'F':
-        os.system('cls')
-        print("---------------------------------------------------------------------------------------------------")
-
-
-    elif choice == 'G':
         print("YOU HAVE EXITED THE PROGRAM THANK YOU")
         break
